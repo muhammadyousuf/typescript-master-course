@@ -37,5 +37,15 @@ let logNumber: (i: number) => void = (i: number) => {
 // when to use annotation
 // 1) function that return any type
 let json = '{"x": 10, "y": 5}';
-let cordinates = JSON.parse(json);
+let cordinates: { x: number; y: number } = JSON.parse(json);
 console.log(cordinates);
+
+// declare variable and initilze next line
+let words: string[] = ['red', 'green', 'blue'];
+let wordFound: boolean;
+
+for(let i = 0; i < words.length; i++){
+  if(words[i] === 'green'){
+    wordFound = true
+  }
+}
