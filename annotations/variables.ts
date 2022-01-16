@@ -40,12 +40,22 @@ let json = '{"x": 10, "y": 5}';
 let cordinates: { x: number; y: number } = JSON.parse(json);
 console.log(cordinates);
 
-// declare variable and initilze next line
+// 2) declare variable and initilze next line
 let words: string[] = ['red', 'green', 'blue'];
 let wordFound: boolean;
 
-for(let i = 0; i < words.length; i++){
-  if(words[i] === 'green'){
-    wordFound = true
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'green') {
+    wordFound = true;
+  }
+}
+
+// 3) variable whose type cannot be inferred corretly
+let number: number[] = [-10, -34, 4];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < number.length; i++) {
+  if (number[i] > 0) {
+    numberAboveZero = number[i];
   }
 }
